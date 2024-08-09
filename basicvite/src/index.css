@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root{
+    
+    display: flex;
+    width: 800px;
+    height: 200px;
+    
+}
+
+
+
