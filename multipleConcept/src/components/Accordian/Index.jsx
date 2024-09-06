@@ -7,14 +7,11 @@ function Accordian() {
   const [enable, setEnable] = useState(false);
   const [multi, setMulti] = useState([]);
 
-
   const handleSingleSelection = (id) => {
     setSelected(id);
   };
 
-
   const handlemulti = (id) => {
-    
     const cpy = [...multi];
     const findindex = cpy.indexOf(id);
     console.log(findindex);
@@ -26,16 +23,13 @@ function Accordian() {
     setMulti(cpy);
   };
 
-
   console.log(selected, multi);
-
 
   return (
     <div className="wrapper">
-    
       <button
         onClick={() => {
-          setEnable(!enable)
+          setEnable(!enable);
           setSelected(null);
         }}
       >
@@ -57,6 +51,7 @@ function Accordian() {
                 <span>+</span>
               </div>
               {selected === dataitem.id || multi.indexOf(dataitem.id) !== -1 ? (
+                
                 <div className="content">{dataitem.answer}</div>
               ) : null}
             </div>
